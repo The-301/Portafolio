@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/Login.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+</head>
+<body id="large-header">
+    <div id="login-button">
+    <img src="https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png"></img>
+    </div>
+    <div class="container" id="container">
+        <form action="login.php" method="post" name="">
+            <h2>Inicio de sesion</h2>
+            <?php if (isset($mensaje_error)): ?>
+    <p><?php echo $mensaje_error; ?></p>
+  <?php endif; ?>
+            <div class="form-control">
+                <input type="text" name="usuario" id="usuario" required autocomplete="off">
+                <label>Email</label>
+            </div>
+
+            <div class="form-control">
+                <input type="password" name="contrasena" id="contrasena" required autocomplete="off">
+                <label>Password</label>
+            </div>
+            <button type="submit" name="submit" id="submit"><span>Ingresar</span></button>
+        </form>
+    </div>
+    <canvas id="demo-canvas"></canvas>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="JS/login.js"></script>
+</body>
+</html>
